@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		FA0629C7244D9FD300A32797 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0629C5244D9FD300A32797 /* Main.storyboard */; };
 		FA0629C9244D9FDA00A32797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0629C8244D9FDA00A32797 /* Assets.xcassets */; };
 		FA0629CC244D9FDA00A32797 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0629CA244D9FDA00A32797 /* LaunchScreen.storyboard */; };
+		FA0629D5244DA3AA00A32797 /* web3swift in Frameworks */ = {isa = PBXBuildFile; productRef = FA0629D4244DA3AA00A32797 /* web3swift */; };
+		FA30514F2466F5DA00FE7D8A /* contractAbi.json in Resources */ = {isa = PBXBuildFile; fileRef = FA30514E2466F5DA00FE7D8A /* contractAbi.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		FA0629C8244D9FDA00A32797 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA0629CB244D9FDA00A32797 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA0629CD244D9FDA00A32797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA30514E2466F5DA00FE7D8A /* contractAbi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contractAbi.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0629D5244DA3AA00A32797 /* web3swift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +60,7 @@
 		FA0629BE244D9FD300A32797 /* Case2-Bankex-SPM */ = {
 			isa = PBXGroup;
 			children = (
+				FA30514E2466F5DA00FE7D8A /* contractAbi.json */,
 				FA0629BF244D9FD300A32797 /* AppDelegate.swift */,
 				FA0629C1244D9FD300A32797 /* SceneDelegate.swift */,
 				FA0629C3244D9FD300A32797 /* ViewController.swift */,
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = "Case2-Bankex-SPM";
+			packageProductDependencies = (
+				FA0629D4244DA3AA00A32797 /* web3swift */,
+			);
 			productName = "Case2-Bankex-SPM";
 			productReference = FA0629BC244D9FD300A32797 /* Case2-Bankex-SPM.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = FA0629B3244D9FD300A32797;
+			packageReferences = (
+				FA0629D3244DA3AA00A32797 /* XCRemoteSwiftPackageReference "web3swift" */,
+			);
 			productRefGroup = FA0629BD244D9FD300A32797 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +138,7 @@
 			files = (
 				FA0629CC244D9FDA00A32797 /* LaunchScreen.storyboard in Resources */,
 				FA0629C9244D9FDA00A32797 /* Assets.xcassets in Resources */,
+				FA30514F2466F5DA00FE7D8A /* contractAbi.json in Resources */,
 				FA0629C7244D9FD300A32797 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +350,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA0629D3244DA3AA00A32797 /* XCRemoteSwiftPackageReference "web3swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BANKEX/web3swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.10;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA0629D4244DA3AA00A32797 /* web3swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA0629D3244DA3AA00A32797 /* XCRemoteSwiftPackageReference "web3swift" */;
+			productName = web3swift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA0629B4244D9FD300A32797 /* Project object */;
 }
